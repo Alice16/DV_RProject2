@@ -1,0 +1,1 @@
+wdf2 %>% ggplot(aes(x = USERS, y = n, color = USERS)) + geom_bar(stat = "identity") + facet_wrap(~COUNTRY)

@@ -1,0 +1,51 @@
+---
+title: "Project 2"
+output: html_document
+---
+
+For this project, a csv file containing information about launched satellites over the world was imported into the RestfulOracleDatabase. The data included the country of origin, it's purpose, and various other information.
+
+##Importing Dataframe
+The first step is to import libraries needed for this project:
+```{r}
+source("../.Rprofile", echo=TRUE)
+```
+
+Next, we will build our dataframe. We grab the data from the Oracle Database with a SQL query. The following dataframe shown is the head of the whole dataframe
+```{r}
+source("../01_Data/Dataframes.R", echo=TRUE)
+```
+
+##Data Wrangling
+We can now use data wrangling to modify and filter out the raw data into dataframes that allows for analysis
+
+This data set shows the number of satellite launched from the countries with the 10 most number of launches
+```{r}
+source("../02_DataWrangling/Wrangle1.R", echo=TRUE)
+```
+
+This data set shows the user of those satellites from the top 10 countries with launches. The satellites that are belong to multiple users are ommitted.
+```{r}
+source("../02_DataWrangling/Wrangle2.R", echo=TRUE)
+```
+
+This data set shows the launch dates of each of the satellites from the top 10 contry with the most launches. There are a few satellites that are missing this data, so they are omitted.
+```{r}
+source("../02_DataWrangling/Wrangle3.R", echo=TRUE)
+```
+
+##Visualization
+Out of the top 10 countries, the US alone overshadowed the other 9 countries combined in the number of satellite launched
+```{r}
+source("../03_Visualizations/Visualize1.R", echo=TRUE)
+```
+
+The satellites sent tend to have the most commercial user while least civil user. The military and government user vary depending on the country.
+```{r}
+source("../03_Visualizations/Visualize2.R", echo=TRUE)
+```
+
+Due to the missing data, only about half of the satellites were recorded onto the plot. Based on the plot alone, it seems satellite launches is popular between 2004 to 2012, which it dropped off in frequency. This however, is only based on circumstancial evidence and not accurate.
+```{r}
+source("../03_Visualizations/Visualize3.R", echo=TRUE)
+```

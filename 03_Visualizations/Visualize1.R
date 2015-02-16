@@ -1,0 +1,1 @@
+wdf1 %>% ggplot(aes(x = COUNTRY, y = CountryAmount)) + geom_bar(stat = "identity")

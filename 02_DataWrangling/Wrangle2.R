@@ -1,0 +1,2 @@
+wdf2 <- df %>% select(USERS, COUNTRY) %>% group_by(COUNTRY, USERS) %>% summarise(n = n()) %>% filter(COUNTRY %in% c("USA", "China (PR)", "Russia", "Canada", "ESA", "Germany", "India", "Japan", "Multinational", "United Kingdom"), USERS %in% c("Civil", "Commercial", "Government", "Military"))
+head(wdf2)

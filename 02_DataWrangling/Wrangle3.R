@@ -1,0 +1,2 @@
+wdf3 <- df %>% select(LAUNCHDATE, COUNTRY) %>% group_by(COUNTRY, LAUNCHDATE) %>% filter(COUNTRY %in% c("USA", "China (PR)", "Russia", "Canada", "ESA", "Germany", "India", "Japan", "Multinational", "United Kingdom"))
+head(wdf3)

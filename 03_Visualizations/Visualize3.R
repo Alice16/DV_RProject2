@@ -1,0 +1,1 @@
+wdf3 %>% ggplot(aes(x = COUNTRY, y = as.Date(LAUNCHDATE, "%Y/%m/%d"))) + geom_point()
